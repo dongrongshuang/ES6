@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="nav">
+    <li>001</li>
+    <li>002</li>
+    <li>003</li>
+    <li>004</li>
+</ul>
+<script>
+  /*  console.log(a);//变量提升
+    var a = 5;
+    // 相当于
+    var a;
+    console.log(a);
+    a=5;*/
+
+
+  /*  for(var i= 0; i<5; i++){
+        console.log(i);
+    }
+    console.log(i)//var没有块级作用域*/
+/*
+  if(false){
+      var a= 5;
+  }
+  console.log(a);//结果undefined  所以ES6不建议使用var*/
+
+   /*let a = 5;
+   let a= 6;
+   console.log(a);*/
+
+ /*  function foo() {
+       console.log(a);
+       let a =5;
+   }
+    foo();*/
+
+   /*var aLi = document.querySelectorAll('#nav li');
+   for(var i=0; i<aLi.length; i++){
+       aLi[i].index = i;//对象.自己属性  相当于 给每个Li定义一个属性  自定义属性赋值
+       aLi[i].onclick = function(){
+          console.log(this.index);//自定义属性取值
+       };
+   }*/
+
+
+  /* //闭包
+      var aLi = document.querySelectorAll('#nav li');
+      for(var i=0; i<aLi.length; i++) {
+          (function(idx){
+              aLi[idx].onclick = function(){
+                  console.log(idx);
+              };
+          })(i);
+      };
+      //GC
+      function fn1(){
+         return function fn2(){
+              var a = 5;
+              return a ;
+          }
+      }
+      console.log(fn1()());
+      //fn1调用的时候相当于返回一个return的那个函数   当再括号的时候相当于调用返回的fn2  这时fn2带回这个a  a又返回到fn1
+    // a一直被调用*/
+  /*var aLi = document.querySelectorAll('#nav li');
+  for( let i=0; i<aLi.length; i++){
+      aLi[i].onclick = function() {
+          console.log(i);
+      };
+      };*/
+
+  /*  const obj = {
+        name : 'zhangsan',
+        age:18
+  };
+    Object.freeze(obj);//冻结
+    obj.age = 20;
+    console.log(obj);*/
+
+    /*const arr=[1,2,3,4];//数组也是一个对象
+    arr.push(5);
+    console.log(arr);*/
+
+    /*console.log('1==' + a);
+    var a = 5;
+    function a(){
+        console.log('2==' + a);
+    }
+    a();//a是5
+    console.log('3==' + a);
+    //1输出的是一个方法
+    //方法比变量级别高一些*/
+
+  /*  let[a, [d, b], c] = [1, [2, 4], 3];
+    console.log(a,b,c,d);*/
+
+    /*let { name, age } = {
+        name:'list',
+        age:18
+    };
+    console.log(name , age);*/
+
+  /*  function foo({name, age, school='xx大学'}){
+    }
+    let obj = {
+        name:'zs',
+        age:20
+    };
+    foo(obj);*/
+/*  function foo() {
+      let obj = {
+          name:'zs',
+          age:20
+      };
+      return obj;
+  }
+  let {name,age} = foo();
+  console.log(name, age);*/
+//变量互换
+/*    let a = 5;
+    let b = 6;
+    a = a+b;//11
+    b = a-b;//5
+    a = a-b;//6
+    console.log(a,b)*/
+
+    /*var [b,a] = [a,b];
+    console.log(a,b);*/
+
+    let json = '{"a": "Hello", "b": "world"}';
+    let {a,b}= JSON.parse(json);
+    console.log(a,b);
+</script>
+</body>
+</html>
