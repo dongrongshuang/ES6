@@ -1,0 +1,35 @@
+#div1 {
+  background-color: aqua; }
+
+#div2 {
+  color: red;
+  background-color: blue;
+  font-size: 20px; }
+
+#div3 {
+  background-color: black;
+  border-left: 0;
+  border-top: 0; }
+  #div3:hover aa {
+    background: #ff00ff; }
+
+#main p {
+  corlor: #fff00f;
+  width: 97%; }
+  #main p .x {
+    color: #ff00ff;
+    background-color: aqua; }
+
+#main {
+  color: #fff00f; }
+  #main a {
+    text-decoration: none; }
+    #main a:hover {
+      color: red; }
+
+#main {
+  color: magenta; }
+  #main-contend {
+    color: black; }
+
+/*# sourceMappingURL=style.css.map */

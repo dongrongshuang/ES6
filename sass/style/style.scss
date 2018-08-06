@@ -1,0 +1,44 @@
+$color:red;
+#div1{
+  background-color: aqua;
+}
+#div2{
+  color: $color;
+  background-color: blue;
+  font-size: 20px;
+}
+#div3{
+  background-color: black;
+  &:hover aa{
+    background: #ff00ff;
+  }
+  border:{
+    left:0;
+    top:0;
+  }
+}
+@mixin name($color){
+  background: #ff00ff;
+}
+#main p{
+    corlor:#fff00f;
+    width:97%;
+    .x{
+      color:#ff00ff;
+      background-color: aqua;
+    }
+  }
+#main {
+  color: #fff00f;
+  a{
+    text-decoration: none;
+    &:hover{color:red;}
+  }
+}
+#main {
+  color: magenta;
+  &-contend{color: black}
+}
+
+
+
