@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    //callback hell
+  /*  $.get('a.json',res =>{
+        console.log(res);
+        $.get('b.json',res =>{
+            console.log(res);
+            $.get('c.json',res =>{
+                console.log(res);
+            });
+        });
+    });*/
+
+        new Promise((resove,reject) =>{
+            $.get('a.json',res =>{
+                console.log(res);
+                resove (res.a)
+            });
+    }).then((resA) =>{
+            console.log('a成功');
+            console.log('resA');
+            return new Promise((resove,reject)=>{
+                $.get('b.json',res=>{
+                    console.log(res);
+                    resove();
+                });
+            }).then((resB)=>{
+                console.log('b成功');
+                console.log(resB);
+                return new Promise ((resove,reject)=>{
+                    $.get('c.json',res =>{
+                        console.log(res);
+                        resove();
+                    });
+                })
+            });
+        });
+</script>
+</body>
+</html>
