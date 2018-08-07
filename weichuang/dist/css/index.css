@@ -1,0 +1,10 @@
+#div1 {
+  background: #ff0;
+  transform: rotate(30deg); }
+#div1{
+    width: 200px;
+    height: 200px;
+    /*background: url("../img/1.jpg") no-repeat;*/
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+}
